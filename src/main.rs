@@ -29,10 +29,22 @@ fn main() {
     // println!("{}", pizza_slice.len());
 
 //     Array Slices
+//     let values = [4, 8, 15,16,23, 42];
+//
+//     let my_slice = &values[1..];
+//     println!("{my_slice:?}");
+
+//     Deref Coercision with array slices
     let values = [4, 8, 15,16,23, 42];
+    let regular_conference = &values;
+    print_length(regular_conference);
+    let slice_of_three = &values[..3];
+    print_length(slice_of_three);
 
-    let my_slice = &values[1..];
-    println!("{my_slice:?}");
 
 
+}
+
+fn print_length(reference: &[i32]){
+    println!("{}", reference.len());
 }
