@@ -35,13 +35,21 @@ fn main() {
 //     println!("{my_slice:?}");
 
 //     Deref Coercision with array slices
-    let values = [4, 8, 15,16,23, 42];
-    let regular_conference = &values;
-    print_length(regular_conference);
-    let slice_of_three = &values[..3];
-    print_length(slice_of_three);
+//     let values = [4, 8, 15,16,23, 42];
+//     let regular_conference = &values;
+//     print_length(regular_conference);
+//     let slice_of_three = &values[..3];
+//     print_length(slice_of_three);
 
-
+//     Mutable arrays slices
+    let mut my_array = [10, 15,20, 25, 30];
+    let my_slice = &mut my_array[2..4];
+    
+    println!("{my_slice:?}");
+    
+    my_slice[0] = 100;
+    
+    println!("{my_slice:?}");
 
 }
 
